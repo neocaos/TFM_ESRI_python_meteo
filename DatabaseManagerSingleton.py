@@ -207,7 +207,7 @@ def insertTest():
 
     try:
         logging.debug('Hacemos las inserciones en BBDD')
-        x = DbManagerSingleton('canyons','owner','owner','localhost')
+        x = DbManagerSingleton('db','user','pwd','instance')
 
         print(x.instance.isconnected())
         conection = x.instance.Connect()
@@ -227,7 +227,7 @@ def updateMeteoPoints():
         logging.debug('Haciendo update de la tabla MeteoPoints con los valores del historico')
 
         logging.debug('Hacemos las inserciones en BBDD')
-        x = DbManagerSingleton('canyons','owner','owner','localhost')
+        x = DbManagerSingleton('db','user','pwd','instance')
 
         print(x.instance.isconnected())
         conection = x.instance.Connect()
